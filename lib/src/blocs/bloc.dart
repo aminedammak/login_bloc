@@ -14,4 +14,4 @@ class Bloc extends Object with Validators {
   Stream<String> get password => _password.stream.transform(validePassword);
 }
 
-final bloc = Bloc();
+//final bloc = Bloc();
