@@ -60,7 +60,11 @@ Widget submitButton(Bloc bloc) {
     stream: bloc.submitValid,
     builder: (context, snapshot) {
       return ElevatedButton(
-        onPressed: snapshot.hasData ? () {} : null,
+        onPressed: snapshot.hasData
+            ? () {
+                bloc.submit();
+              }
+            : null,
         child: Text("Submit"),
       );
     },
